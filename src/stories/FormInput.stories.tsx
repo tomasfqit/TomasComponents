@@ -66,26 +66,33 @@ export const LoginForm: Story = {
     }
 
     return (
-      <form
-        onSubmit={handleSubmit(onSubmit)}
-        style={{ display: 'flex', flexDirection: 'column', gap: 12, width: 320 }}
-      >
-        <FormInput<FormFields>
-          title="Email"
-          name="email"
-          control={control}
-          placeholder="you@example.com"
-          type="email"
-        />
-        <FormInput<FormFields>
-          title="Password"
-          name="password"
-          control={control}
-          placeholder="••••••••"
-          type="password"
-        />
-        <Button title="Login" onClick={handleSubmit(onSubmit)} />
-      </form>
-    )
+      <div className="flex flex-col gap-4 rounded-md p-4 border border-gray-300 bg-white text-gray-900 shadow-sm">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: 12,
+            width: 320,
+          }}
+        >
+          <FormInput<FormFields>
+            title="Email"
+            name="email"
+            control={control}
+            placeholder="you@example.com"
+            type="email"
+          />
+          <FormInput<FormFields>
+            title="Password"
+            name="password"
+            control={control}
+            placeholder="••••••••"
+            type="password"
+          />
+          <Button title="Login" onClick={handleSubmit(onSubmit)} />
+        </form>
+      </div>
+    );
   },
 }
