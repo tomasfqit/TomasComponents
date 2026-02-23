@@ -3,5 +3,5 @@ export interface FormLabelProps {
 }
 
 export const FormLabel = ({ title }: FormLabelProps) => {
-  return <label>{title}</label>
+  return <label className="text-sm font-bold">{title}</label>
 }

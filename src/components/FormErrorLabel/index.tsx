@@ -3,5 +3,5 @@ export interface FormErrorLabelProps {
 }
 
 export const FormErrorLabel = ({ error }: FormErrorLabelProps) => {
-  return <small >{error}</small>
+  return <small className="text-red-500 text-xs" >{error}</small>
 }
