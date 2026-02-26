@@ -3,5 +3,7 @@ export interface FormLabelProps {
 }
 
 export const FormLabel = ({ title }: FormLabelProps) => {
-  return <label className="text-sm font-bold">{title}</label>
+  return <div className="text-start">
+    <strong className="text-sm">{title}</strong>
+  </div>
 }

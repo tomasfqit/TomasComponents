@@ -29,8 +29,10 @@ export interface ButtonProps {
   title: ReactNode;
   variant?: ButtonVariant;
   onClick: () => void;
+  disabled?: boolean;
+  loading?: boolean;
 }
 
-export const Button = ({ title, onClick, type = 'primary', color = 'primary', variant = 'solid' }: ButtonProps) => {
-  return <AntdButton onClick={onClick} type={type} color={color} variant={variant}>{title}</AntdButton>
+export const Button = ({ title, onClick, type = 'primary', color = 'primary', variant = 'solid', disabled = false, loading = false }: ButtonProps) => {
+  return <AntdButton onClick={onClick} type={type} color={color} variant={variant} disabled={disabled} loading={loading}>{title}</AntdButton>
 }

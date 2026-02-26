@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "build:lib": "vite build --config vite.lib.config.ts && tsc -p tsconfig.build.json",
-    "pack:local": "yarn build:lib && yarn pack --filename tomascomponents.tgz",
+    "create-package": "yarn build:lib && yarn pack --filename tomascomponents.tgz",
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",

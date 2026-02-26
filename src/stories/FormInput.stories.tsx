@@ -34,7 +34,7 @@ const renderWithForm = (args: Story['args']) => {
   const title = args?.title ?? 'Input'
   const name = (args?.name as keyof FormFields | undefined) ?? 'email'
 
-  return <FormInput<FormFields> {...args} title={title} name={name} control={control} />
+  return <FormInput<FormFields> {...args} label={title} name={name} control={control} />
 }
 
 export const Email: Story = {
@@ -43,7 +43,7 @@ export const Email: Story = {
 
 export const Name: Story = {
   args: {
-    title: 'Name',
+    label: 'Name',
     name: 'name',
     placeholder: 'Enter your name',
   },
@@ -77,14 +77,14 @@ export const LoginForm: Story = {
           }}
         >
           <FormInput<FormFields>
-            title="Email"
+            label="Email"
             name="email"
             control={control}
             placeholder="you@example.com"
             type="email"
           />
           <FormInput<FormFields>
-            title="Password"
+            label="Password"
             name="password"
             control={control}
             placeholder="••••••••"
