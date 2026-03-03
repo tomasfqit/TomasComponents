@@ -62,7 +62,7 @@ export const Drawer = ({
   const dimensionProp =
     placement === "top" || placement === "bottom"
       ? { height: resolvedSize }
-      : { width: resolvedSize };
+      : { size: resolvedSize as never };
 
   return (
     <AntdDrawer
