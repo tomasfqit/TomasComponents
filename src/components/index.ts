@@ -9,3 +9,9 @@ export type { IInputProps } from './FormInput';
 
 export { Drawer } from './Drawer';
 export type { DrawerProps } from './Drawer';
+
+export { Menu } from './Menu';
+export type { MenuProps } from './Menu';
+
+export { Dropdown } from './Dropdown';
+export type { DropdownProps } from './Dropdown';
