@@ -14,6 +14,7 @@ export interface OpenModalOptions {
   okText?: ReactNode;
   cancelText?: ReactNode;
   footer?: ModalProps["footer"];
+  showButtons?: boolean;
 }
 
 export interface ModalResponsiveContextValue {
@@ -24,7 +25,7 @@ export interface ModalResponsiveContextValue {
 export const INITIAL_MODAL_OPTIONS: OpenModalOptions = {
   title: undefined,
   content: null,
-  width: "60dvw",
+  width: "60vw",
   height: "60dvh",
   centered: true,
   maskClosable: true,
@@ -34,4 +35,5 @@ export const INITIAL_MODAL_OPTIONS: OpenModalOptions = {
   okText: undefined,
   cancelText: undefined,
   footer: undefined,
+  showButtons: false,
 };

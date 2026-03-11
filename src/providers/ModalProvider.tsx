@@ -1,4 +1,4 @@
-import { Modal } from "antd";
+import { Grid, Modal } from "antd";
 import type { ReactNode } from "react";
 import { useCallback, useMemo, useState } from "react";
 import { INITIAL_MODAL_OPTIONS } from "./modalResponsive.types";
@@ -10,8 +10,10 @@ interface ModalProviderProps {
 }
 
 export const ModalProvider = ({ children }: ModalProviderProps) => {
+  const screens = Grid.useBreakpoint();
   const [isOpen, setIsOpen] = useState(false);
   const [modalOptions, setModalOptions] = useState<OpenModalOptions>(INITIAL_MODAL_OPTIONS);
+  const resolvedWidth = screens.md ? modalOptions.width : "90vw";
 
   const closeModal = useCallback(() => {
     setIsOpen(false);
@@ -50,8 +52,8 @@ export const ModalProvider = ({ children }: ModalProviderProps) => {
         }}
         okText={modalOptions.okText}
         cancelText={modalOptions.cancelText}
-        footer={modalOptions.footer}
-        width={modalOptions.width}
+        footer={modalOptions.showButtons ? modalOptions.footer : null}
+        width={resolvedWidth}
         styles={{
           body: {
             height: modalOptions.height,
