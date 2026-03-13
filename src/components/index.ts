@@ -75,3 +75,5 @@ export type { UploadProps } from './Upload';
 
 export { Collapse } from './Collapse';
 export type { CollapseProps } from './Collapse';
+export { Text } from './Text';
+export type { TextProps, TextType, TextSize } from './Text';
