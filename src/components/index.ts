@@ -7,6 +7,12 @@ export type { ButtonIconProps } from './ButtonIcon';
 export { FormInput } from './FormInput';
 export type { IInputProps } from './FormInput';
 
+export { FormSelect } from './FormSelect';
+export type { FormSelectProps } from './FormSelect';
+
+export { FormNumberInput } from './FormNumberInput';
+export type { FormNumberInputProps } from './FormNumberInput';
+
 export { Drawer } from './Drawer';
 export type { DrawerProps } from './Drawer';
 
