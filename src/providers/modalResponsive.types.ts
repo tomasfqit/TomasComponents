@@ -13,6 +13,9 @@ export interface OpenModalOptions {
   onCancel?: ModalProps["onCancel"];
   okText?: ReactNode;
   cancelText?: ReactNode;
+  confirmLoading?: ModalProps["confirmLoading"];
+  okButtonProps?: ModalProps["okButtonProps"];
+  cancelButtonProps?: ModalProps["cancelButtonProps"];
   footer?: ModalProps["footer"];
   showButtons?: boolean;
 }
@@ -34,6 +37,9 @@ export const INITIAL_MODAL_OPTIONS: OpenModalOptions = {
   onCancel: undefined,
   okText: undefined,
   cancelText: undefined,
+  confirmLoading: false,
+  okButtonProps: undefined,
+  cancelButtonProps: undefined,
   footer: undefined,
   showButtons: false,
 };

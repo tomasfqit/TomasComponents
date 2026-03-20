@@ -52,6 +52,9 @@ export const ModalProvider = ({ children }: ModalProviderProps) => {
         }}
         okText={modalOptions.okText}
         cancelText={modalOptions.cancelText}
+        confirmLoading={modalOptions.confirmLoading}
+        okButtonProps={modalOptions.okButtonProps}
+        cancelButtonProps={modalOptions.cancelButtonProps}
         footer={modalOptions.showButtons ? modalOptions.footer : null}
         width={resolvedWidth}
         styles={{
