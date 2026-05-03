@@ -43,8 +43,8 @@ export const ModalProvider = ({ children }: ModalProviderProps) => {
         title={modalOptions.title}
         open={isOpen}
         centered={modalOptions.centered}
-        maskClosable={modalOptions.maskClosable}
-        destroyOnClose={modalOptions.destroyOnClose}
+        mask={{ closable: modalOptions.maskClosable }}
+        destroyOnHidden={modalOptions.destroyOnClose}
         onOk={modalOptions.onOk}
         onCancel={(event) => {
           modalOptions.onCancel?.(event);

@@ -31,8 +31,9 @@ export interface ButtonProps {
   onClick: () => void;
   disabled?: boolean;
   loading?: boolean;
+  size?: "small" | "middle" | "large";
 }
 
-export const Button = ({ title, onClick, type = 'primary', color = 'primary', variant = 'solid', disabled = false, loading = false }: ButtonProps) => {
-  return <AntdButton onClick={onClick} type={type} color={color} variant={variant} disabled={disabled} loading={loading}>{title}</AntdButton>
+export const Button = ({ title, onClick, type = 'primary', color = 'primary', variant = 'solid', disabled = false, loading = false, size = 'middle' }: ButtonProps) => {
+  return <AntdButton onClick={onClick} type={type} color={color} variant={variant} disabled={disabled} loading={loading} size={size}>{title}</AntdButton>
 }

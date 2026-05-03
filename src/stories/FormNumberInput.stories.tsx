@@ -5,10 +5,12 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { FormNumberInput } from '../components/FormNumberInput';
 import { Button } from '../components/Button';
 
-type FormFields = {
-  age: number | null
-  salary: number | null
-}
+const formSchema = z.object({
+  age: z.number().min(18, 'Must be 18+'),
+  salary: z.number().min(0, 'Must be positive'),
+});
+
+type FormFields = z.infer<typeof formSchema>;
 
 const meta: Meta<typeof FormNumberInput> = {
   title: 'Components/FormNumberInput',
@@ -27,7 +29,7 @@ type Story = StoryObj<typeof FormNumberInput>
 
 const renderWithForm = (args: Story['args']) => {
   const { control } = useForm<FormFields>({
-    defaultValues: { age: null, salary: null },
+    defaultValues: { age: 18, salary: 0 },
   })
 
   const label = args?.label ?? 'Age'
@@ -50,11 +52,8 @@ export const Age: Story = {
 export const WithValidation: Story = {
   render: () => {
     const { control, handleSubmit } = useForm<FormFields>({
-      resolver: zodResolver(z.object({
-        age: z.number().min(18, 'Must be 18+'),
-        salary: z.number().min(0, 'Must be positive'),
-      })),
-      defaultValues: { age: null, salary: null },
+      resolver: zodResolver(formSchema),
+      defaultValues: { age: 18, salary: 0 },
     })
 
     const onSubmit = (data: FormFields) => {

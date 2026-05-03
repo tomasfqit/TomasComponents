@@ -13,6 +13,9 @@ export type { FormSelectProps } from './FormSelect';
 export { FormNumberInput } from './FormNumberInput';
 export type { FormNumberInputProps } from './FormNumberInput';
 
+export { FormDatePicker } from './FormDatePicker';
+export type { FormDatePickerProps } from './FormDatePicker';
+
 export { Drawer } from './Drawer';
 export type { DrawerProps } from './Drawer';
 

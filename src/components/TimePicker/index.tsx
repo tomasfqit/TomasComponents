@@ -3,4 +3,6 @@ import type { TimePickerProps as AntdTimePickerProps } from 'antd';
 
 export type TimePickerProps = AntdTimePickerProps;
 
-export const TimePicker = AntdTimePicker;
+export const TimePicker = (props: TimePickerProps) => {
+  return <AntdTimePicker {...props} />;
+};
