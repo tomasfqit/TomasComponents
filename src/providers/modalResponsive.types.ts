@@ -18,6 +18,7 @@ export interface OpenModalOptions {
   cancelButtonProps?: ModalProps["cancelButtonProps"];
   footer?: ModalProps["footer"];
   showButtons?: boolean;
+  closable?: boolean;
 }
 
 export interface ModalResponsiveContextValue {
@@ -42,4 +43,5 @@ export const INITIAL_MODAL_OPTIONS: OpenModalOptions = {
   cancelButtonProps: undefined,
   footer: undefined,
   showButtons: false,
+  closable: false,
 };

@@ -7,6 +7,9 @@ export type { ButtonIconProps } from './ButtonIcon';
 export { FormInput } from './FormInput';
 export type { IInputProps } from './FormInput';
 
+export { FormPasswordInput } from './FormPasswordInput';
+export type { FormPasswordInputProps } from './FormPasswordInput';
+
 export { FormSelect } from './FormSelect';
 export type { FormSelectProps } from './FormSelect';
 
